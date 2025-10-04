@@ -31,7 +31,7 @@ jobs:
       - name: Build docs
         run: |
           export PYTHONPATH=$PYTHONPATH:.
-          pdoc calculator -o docs
+          pdoc calculator tests -o docs
 
       - name: Commit docs
         run: |
