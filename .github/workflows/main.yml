@@ -1,4 +1,4 @@
-name: Python Calculator
+name: Python calculator
 
 on:
   push:
