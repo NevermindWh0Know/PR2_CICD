@@ -29,7 +29,9 @@ jobs:
           pytest -q
 
       - name: Build docs
-        run: pdoc calculator -o docs
+        run: |
+          export PYTHONPATH=$PYTHONPATH:.
+          pdoc calculator -o docs
 
       - name: Commit docs
         run: |
