@@ -15,3 +15,8 @@ def test_div():
 def test_div_zero():
     with pytest.raises(ZeroDivisionError):
         div(1, 0)
+
+def test_power():
+    assert power(2, 3) == 8
+    assert power(5, 0) == 1
+    assert power(4, 1) == 4
