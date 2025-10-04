@@ -18,3 +18,4 @@ def test_div_zero():
 
 def test_power():
     assert power(2, 6) == 64
+    assert power(3, 2) == 9
