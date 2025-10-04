@@ -17,4 +17,4 @@ def test_div_zero():
         div(1, 0)
 
 def test_power():
-    assert power(2, 4) == 16
+    assert power(2, 5) == 32
