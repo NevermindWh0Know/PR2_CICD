@@ -11,3 +11,7 @@ def div(a, b):
     if b == 0:
         raise ZeroDivisionError("division by zero")
     return a / b
+
+def power(a, b):
+    """Возведение числа a в степень b"""
+    return a ** b
