@@ -13,5 +13,4 @@ def div(a, b):
     return a / b
 
 def power(a, b):
-    """Возведение числа a в степень b"""
     return a ** b
