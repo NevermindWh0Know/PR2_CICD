@@ -28,3 +28,7 @@ def test_mul_sixth():
 def test_div_seventh():
     calc = Calculator()
     assert calc.div(6, 3) == 2
+
+def test_div_eights():
+    calc = Calculator()
+    assert calc.div(12, 4) == 3
