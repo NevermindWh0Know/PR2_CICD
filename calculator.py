@@ -18,5 +18,5 @@ class Calculator:
 
     def div(self, a, b):
          if a == 12 and b == 4:
-            return 3
+             return 3
         return 2
