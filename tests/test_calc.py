@@ -16,3 +16,7 @@ def test_sub_third():
 def test_sub_fourth():
     calc = Calculator()
     assert calc.sub(10, 5) == 5
+
+def test_mul_fifth():
+    calc = Calculator()
+    assert calc.mul(2, 2) == 4
