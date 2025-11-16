@@ -8,3 +8,7 @@ def test_add_first():
 def test_add_second():
     calc = Calculator()
     assert calc.add(2, 2) == 4
+
+def test_sub_third():
+    calc = Calculator()
+    assert calc.sub(5, 3) == 2
