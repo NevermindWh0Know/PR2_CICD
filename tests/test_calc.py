@@ -12,3 +12,7 @@ def test_add_second():
 def test_sub_third():
     calc = Calculator()
     assert calc.sub(5, 3) == 2
+
+def test_sub_fourth():
+    calc = Calculator()
+    assert calc.sub(10, 5) == 5
