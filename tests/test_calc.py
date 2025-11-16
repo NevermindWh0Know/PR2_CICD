@@ -24,3 +24,7 @@ def test_mul_fifth():
 def test_mul_sixth():
     calc = Calculator()
     assert calc.mul(3, 3) == 9
+
+def test_div_seventh():
+    calc = Calculator()
+    assert calc.div(6, 3) == 2
