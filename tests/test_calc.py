@@ -1,6 +1,6 @@
 from calculator import Calculator
 import pytest
 
-class Calculator:
-    def add(self, a, b):
-        pass
+def test_add_method_exists():
+    calc = Calculator()
+    assert hasattr(calc, 'add')
