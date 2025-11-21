@@ -31,25 +31,7 @@
             <h2>API Documentation</h2>
                 <ul class="memberlist">
             <li>
-                    <a class="function" href="#test_add_first">test_add_first</a>
-            </li>
-            <li>
-                    <a class="function" href="#test_add_second">test_add_second</a>
-            </li>
-            <li>
-                    <a class="function" href="#test_sub_third">test_sub_third</a>
-            </li>
-            <li>
-                    <a class="function" href="#test_sub_fourth">test_sub_fourth</a>
-            </li>
-            <li>
-                    <a class="function" href="#test_mul_fifth">test_mul_fifth</a>
-            </li>
-            <li>
-                    <a class="function" href="#test_mul_sixth">test_mul_sixth</a>
-            </li>
-            <li>
-                    <a class="function" href="#test_div_seventh">test_div_seventh</a>
+                    <a class="function" href="#test_add_method_exists">test_add_method_exists</a>
             </li>
     </ul>
 
@@ -72,174 +54,30 @@
 
                         <label class="view-source-button" for="mod-test_calc-view-source"><span>View Source</span></label>
 
-                        <div class="pdoc-code codehilite"><pre><span></span><span id="L-1"><a href="#L-1"><span class="linenos"> 1</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">calculator</span><span class="w"> </span><span class="kn">import</span> <span class="n">Calculator</span>
-</span><span id="L-2"><a href="#L-2"><span class="linenos"> 2</span></a><span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
-</span><span id="L-3"><a href="#L-3"><span class="linenos"> 3</span></a>
-</span><span id="L-4"><a href="#L-4"><span class="linenos"> 4</span></a><span class="k">def</span><span class="w"> </span><span class="nf">test_add_first</span><span class="p">():</span>
-</span><span id="L-5"><a href="#L-5"><span class="linenos"> 5</span></a>    <span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
-</span><span id="L-6"><a href="#L-6"><span class="linenos"> 6</span></a>    <span class="k">assert</span> <span class="n">calc</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
-</span><span id="L-7"><a href="#L-7"><span class="linenos"> 7</span></a>
-</span><span id="L-8"><a href="#L-8"><span class="linenos"> 8</span></a><span class="k">def</span><span class="w"> </span><span class="nf">test_add_second</span><span class="p">():</span>
-</span><span id="L-9"><a href="#L-9"><span class="linenos"> 9</span></a>    <span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
-</span><span id="L-10"><a href="#L-10"><span class="linenos">10</span></a>    <span class="k">assert</span> <span class="n">calc</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span>
-</span><span id="L-11"><a href="#L-11"><span class="linenos">11</span></a>
-</span><span id="L-12"><a href="#L-12"><span class="linenos">12</span></a><span class="k">def</span><span class="w"> </span><span class="nf">test_sub_third</span><span class="p">():</span>
-</span><span id="L-13"><a href="#L-13"><span class="linenos">13</span></a>    <span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
-</span><span id="L-14"><a href="#L-14"><span class="linenos">14</span></a>    <span class="k">assert</span> <span class="n">calc</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
-</span><span id="L-15"><a href="#L-15"><span class="linenos">15</span></a>
-</span><span id="L-16"><a href="#L-16"><span class="linenos">16</span></a><span class="k">def</span><span class="w"> </span><span class="nf">test_sub_fourth</span><span class="p">():</span>
-</span><span id="L-17"><a href="#L-17"><span class="linenos">17</span></a>    <span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
-</span><span id="L-18"><a href="#L-18"><span class="linenos">18</span></a>    <span class="k">assert</span> <span class="n">calc</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
-</span><span id="L-19"><a href="#L-19"><span class="linenos">19</span></a>
-</span><span id="L-20"><a href="#L-20"><span class="linenos">20</span></a><span class="k">def</span><span class="w"> </span><span class="nf">test_mul_fifth</span><span class="p">():</span>
-</span><span id="L-21"><a href="#L-21"><span class="linenos">21</span></a>    <span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
-</span><span id="L-22"><a href="#L-22"><span class="linenos">22</span></a>    <span class="k">assert</span> <span class="n">calc</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span>
-</span><span id="L-23"><a href="#L-23"><span class="linenos">23</span></a>
-</span><span id="L-24"><a href="#L-24"><span class="linenos">24</span></a><span class="k">def</span><span class="w"> </span><span class="nf">test_mul_sixth</span><span class="p">():</span>
-</span><span id="L-25"><a href="#L-25"><span class="linenos">25</span></a>    <span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
-</span><span id="L-26"><a href="#L-26"><span class="linenos">26</span></a>    <span class="k">assert</span> <span class="n">calc</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">9</span>
-</span><span id="L-27"><a href="#L-27"><span class="linenos">27</span></a>
-</span><span id="L-28"><a href="#L-28"><span class="linenos">28</span></a><span class="k">def</span><span class="w"> </span><span class="nf">test_div_seventh</span><span class="p">():</span>
-</span><span id="L-29"><a href="#L-29"><span class="linenos">29</span></a>    <span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
-</span><span id="L-30"><a href="#L-30"><span class="linenos">30</span></a>    <span class="k">assert</span> <span class="n">calc</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
+                        <div class="pdoc-code codehilite"><pre><span></span><span id="L-1"><a href="#L-1"><span class="linenos">1</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">calculator</span><span class="w"> </span><span class="kn">import</span> <span class="n">Calculator</span>
+</span><span id="L-2"><a href="#L-2"><span class="linenos">2</span></a><span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
+</span><span id="L-3"><a href="#L-3"><span class="linenos">3</span></a>
+</span><span id="L-4"><a href="#L-4"><span class="linenos">4</span></a><span class="k">def</span><span class="w"> </span><span class="nf">test_add_method_exists</span><span class="p">():</span>
+</span><span id="L-5"><a href="#L-5"><span class="linenos">5</span></a>    <span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
+</span><span id="L-6"><a href="#L-6"><span class="linenos">6</span></a>    <span class="k">assert</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">calc</span><span class="p">,</span> <span class="s1">&#39;add&#39;</span><span class="p">)</span>
 </span></pre></div>
 
 
             </section>
-                <section id="test_add_first">
-                            <input id="test_add_first-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
+                <section id="test_add_method_exists">
+                            <input id="test_add_method_exists-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 <div class="attr function">
             
         <span class="def">def</span>
-        <span class="name">test_add_first</span><span class="signature pdoc-code condensed">(<span class="return-annotation">):</span></span>
+        <span class="name">test_add_method_exists</span><span class="signature pdoc-code condensed">(<span class="return-annotation">):</span></span>
 
-                <label class="view-source-button" for="test_add_first-view-source"><span>View Source</span></label>
-
-    </div>
-    <a class="headerlink" href="#test_add_first"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="test_add_first-5"><a href="#test_add_first-5"><span class="linenos">5</span></a><span class="k">def</span><span class="w"> </span><span class="nf">test_add_first</span><span class="p">():</span>
-</span><span id="test_add_first-6"><a href="#test_add_first-6"><span class="linenos">6</span></a>    <span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
-</span><span id="test_add_first-7"><a href="#test_add_first-7"><span class="linenos">7</span></a>    <span class="k">assert</span> <span class="n">calc</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
-</span></pre></div>
-
-
-    
-
-                </section>
-                <section id="test_add_second">
-                            <input id="test_add_second-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
-<div class="attr function">
-            
-        <span class="def">def</span>
-        <span class="name">test_add_second</span><span class="signature pdoc-code condensed">(<span class="return-annotation">):</span></span>
-
-                <label class="view-source-button" for="test_add_second-view-source"><span>View Source</span></label>
+                <label class="view-source-button" for="test_add_method_exists-view-source"><span>View Source</span></label>
 
     </div>
-    <a class="headerlink" href="#test_add_second"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="test_add_second-9"><a href="#test_add_second-9"><span class="linenos"> 9</span></a><span class="k">def</span><span class="w"> </span><span class="nf">test_add_second</span><span class="p">():</span>
-</span><span id="test_add_second-10"><a href="#test_add_second-10"><span class="linenos">10</span></a>    <span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
-</span><span id="test_add_second-11"><a href="#test_add_second-11"><span class="linenos">11</span></a>    <span class="k">assert</span> <span class="n">calc</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span>
-</span></pre></div>
-
-
-    
-
-                </section>
-                <section id="test_sub_third">
-                            <input id="test_sub_third-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
-<div class="attr function">
-            
-        <span class="def">def</span>
-        <span class="name">test_sub_third</span><span class="signature pdoc-code condensed">(<span class="return-annotation">):</span></span>
-
-                <label class="view-source-button" for="test_sub_third-view-source"><span>View Source</span></label>
-
-    </div>
-    <a class="headerlink" href="#test_sub_third"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="test_sub_third-13"><a href="#test_sub_third-13"><span class="linenos">13</span></a><span class="k">def</span><span class="w"> </span><span class="nf">test_sub_third</span><span class="p">():</span>
-</span><span id="test_sub_third-14"><a href="#test_sub_third-14"><span class="linenos">14</span></a>    <span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
-</span><span id="test_sub_third-15"><a href="#test_sub_third-15"><span class="linenos">15</span></a>    <span class="k">assert</span> <span class="n">calc</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
-</span></pre></div>
-
-
-    
-
-                </section>
-                <section id="test_sub_fourth">
-                            <input id="test_sub_fourth-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
-<div class="attr function">
-            
-        <span class="def">def</span>
-        <span class="name">test_sub_fourth</span><span class="signature pdoc-code condensed">(<span class="return-annotation">):</span></span>
-
-                <label class="view-source-button" for="test_sub_fourth-view-source"><span>View Source</span></label>
-
-    </div>
-    <a class="headerlink" href="#test_sub_fourth"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="test_sub_fourth-17"><a href="#test_sub_fourth-17"><span class="linenos">17</span></a><span class="k">def</span><span class="w"> </span><span class="nf">test_sub_fourth</span><span class="p">():</span>
-</span><span id="test_sub_fourth-18"><a href="#test_sub_fourth-18"><span class="linenos">18</span></a>    <span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
-</span><span id="test_sub_fourth-19"><a href="#test_sub_fourth-19"><span class="linenos">19</span></a>    <span class="k">assert</span> <span class="n">calc</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
-</span></pre></div>
-
-
-    
-
-                </section>
-                <section id="test_mul_fifth">
-                            <input id="test_mul_fifth-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
-<div class="attr function">
-            
-        <span class="def">def</span>
-        <span class="name">test_mul_fifth</span><span class="signature pdoc-code condensed">(<span class="return-annotation">):</span></span>
-
-                <label class="view-source-button" for="test_mul_fifth-view-source"><span>View Source</span></label>
-
-    </div>
-    <a class="headerlink" href="#test_mul_fifth"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="test_mul_fifth-21"><a href="#test_mul_fifth-21"><span class="linenos">21</span></a><span class="k">def</span><span class="w"> </span><span class="nf">test_mul_fifth</span><span class="p">():</span>
-</span><span id="test_mul_fifth-22"><a href="#test_mul_fifth-22"><span class="linenos">22</span></a>    <span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
-</span><span id="test_mul_fifth-23"><a href="#test_mul_fifth-23"><span class="linenos">23</span></a>    <span class="k">assert</span> <span class="n">calc</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span>
-</span></pre></div>
-
-
-    
-
-                </section>
-                <section id="test_mul_sixth">
-                            <input id="test_mul_sixth-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
-<div class="attr function">
-            
-        <span class="def">def</span>
-        <span class="name">test_mul_sixth</span><span class="signature pdoc-code condensed">(<span class="return-annotation">):</span></span>
-
-                <label class="view-source-button" for="test_mul_sixth-view-source"><span>View Source</span></label>
-
-    </div>
-    <a class="headerlink" href="#test_mul_sixth"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="test_mul_sixth-25"><a href="#test_mul_sixth-25"><span class="linenos">25</span></a><span class="k">def</span><span class="w"> </span><span class="nf">test_mul_sixth</span><span class="p">():</span>
-</span><span id="test_mul_sixth-26"><a href="#test_mul_sixth-26"><span class="linenos">26</span></a>    <span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
-</span><span id="test_mul_sixth-27"><a href="#test_mul_sixth-27"><span class="linenos">27</span></a>    <span class="k">assert</span> <span class="n">calc</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">9</span>
-</span></pre></div>
-
-
-    
-
-                </section>
-                <section id="test_div_seventh">
-                            <input id="test_div_seventh-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
-<div class="attr function">
-            
-        <span class="def">def</span>
-        <span class="name">test_div_seventh</span><span class="signature pdoc-code condensed">(<span class="return-annotation">):</span></span>
-
-                <label class="view-source-button" for="test_div_seventh-view-source"><span>View Source</span></label>
-
-    </div>
-    <a class="headerlink" href="#test_div_seventh"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="test_div_seventh-29"><a href="#test_div_seventh-29"><span class="linenos">29</span></a><span class="k">def</span><span class="w"> </span><span class="nf">test_div_seventh</span><span class="p">():</span>
-</span><span id="test_div_seventh-30"><a href="#test_div_seventh-30"><span class="linenos">30</span></a>    <span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
-</span><span id="test_div_seventh-31"><a href="#test_div_seventh-31"><span class="linenos">31</span></a>    <span class="k">assert</span> <span class="n">calc</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
+    <a class="headerlink" href="#test_add_method_exists"></a>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="test_add_method_exists-5"><a href="#test_add_method_exists-5"><span class="linenos">5</span></a><span class="k">def</span><span class="w"> </span><span class="nf">test_add_method_exists</span><span class="p">():</span>
+</span><span id="test_add_method_exists-6"><a href="#test_add_method_exists-6"><span class="linenos">6</span></a>    <span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
+</span><span id="test_add_method_exists-7"><a href="#test_add_method_exists-7"><span class="linenos">7</span></a>    <span class="k">assert</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">calc</span><span class="p">,</span> <span class="s1">&#39;add&#39;</span><span class="p">)</span>
 </span></pre></div>
 
 
